@@ -1,6 +1,4 @@
 package org.example.exemplosClasse.MatrizesComplexa;
-
-import javax.imageio.ImageTranscoder;
 import java.util.Locale;
 import java.util.Scanner;
 
