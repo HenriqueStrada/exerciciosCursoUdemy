@@ -1,15 +1,13 @@
 package org.example.exemplosClasse.Atividade3;
 
 public class PessoaIMC {
-    public int id;
-    public String nome;
-    public int idade;
-    public double altura;
-    public double peso;
+    private int id;
+    private String nome;
+    private int idade;
+    private double altura;
+    private double peso;
 
-    public PessoaIMC(){
 
-    }
     public PessoaIMC(int id, String nome, int idade, double altura, double peso) {
         this.id = id;
         this.nome = nome;
