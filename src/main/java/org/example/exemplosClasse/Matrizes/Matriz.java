@@ -24,7 +24,7 @@ public class Matriz {
             }
         }
 
-        System.out.println("Main diagonal:");
+        System.out.println("MainProduct diagonal:");
 
         for (int i = 0; i < n; i++){
             System.out.print(matriz[i][i] + " ");
