@@ -1,4 +1,4 @@
-package org.example.Heranca.ExercicioUm.Entidades;
+package org.example.Heranca.Um.Entidades;
 
 public class Product {
     private String name;
@@ -18,9 +18,6 @@ public class Product {
     }
     public Double getPrice() {
         return price;
-    }
-    public void setPrice(Double price) {
-        this.price = price;
     }
 
     public String toString(){

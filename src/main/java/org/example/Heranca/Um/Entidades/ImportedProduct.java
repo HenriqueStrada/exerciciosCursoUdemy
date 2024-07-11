@@ -1,4 +1,4 @@
-package org.example.Heranca.ExercicioUm.Entidades;
+package org.example.Heranca.Um.Entidades;
 
 public class ImportedProduct extends Product {
     private final Double customsFee;

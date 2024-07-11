@@ -1,8 +1,8 @@
-package org.example.Heranca.ExercicioUm.Entidades;
+package org.example.Heranca.Um.Entidades;
 
 public class UsedProduct extends Product{
 
-    private String date;
+    private final String date;
 
     public UsedProduct(String name, Double price, String date) {
         super(name, price);
@@ -11,9 +11,6 @@ public class UsedProduct extends Product{
 
     public String getDate() {
         return date;
-    }
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public String toString(){

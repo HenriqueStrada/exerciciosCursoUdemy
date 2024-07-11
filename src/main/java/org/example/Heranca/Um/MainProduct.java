@@ -1,8 +1,8 @@
-package org.example.Heranca.ExercicioUm;
+package org.example.Heranca.Um;
 
-import org.example.Heranca.ExercicioUm.Entidades.ImportedProduct;
-import org.example.Heranca.ExercicioUm.Entidades.Product;
-import org.example.Heranca.ExercicioUm.Entidades.UsedProduct;
+import org.example.Heranca.Um.Entidades.ImportedProduct;
+import org.example.Heranca.Um.Entidades.Product;
+import org.example.Heranca.Um.Entidades.UsedProduct;
 
 import java.util.ArrayList;
 import java.util.List;
