@@ -2,6 +2,7 @@ package org.example.Heranca.ExercicioUm;
 
 import org.example.Heranca.ExercicioUm.Entidades.ImportedProduct;
 import org.example.Heranca.ExercicioUm.Entidades.Product;
+import org.example.Heranca.ExercicioUm.Entidades.UsedProduct;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,22 +15,50 @@ public class MainProduct {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of products: ");
         int n = sc.nextInt();
+        double price, customsFee;
+        String date = "";
+        String name;
+        price = 0;
+        customsFee = 0;
+        name = "";
         List<Product> list = new ArrayList<Product>();
-        for(int i = 0; i <= n; i++) {
-            System.out.println("Product #1 data: ");
+        for(int i = 1; i <= n; i++) {
+            System.out.println("Product #" +  i + " data: ");
             System.out.println("Common, used, or imported (c/u/i)? ");
             String type = sc.next();
             if(type.equals("c")){
                 System.out.print("Name: ");
                 sc.nextLine();
-                String name = sc.nextLine();
+                name = sc.nextLine();
                 System.out.print("Price: ");
-                double price = sc.nextDouble();
+                price = sc.nextDouble();
+                list.add(new Product(name, price));
+            }else if(type.equals("i")){
+                System.out.print("Name: ");
+                sc.nextLine();
+                name = sc.nextLine();
+                System.out.print("Price: ");
+                price = sc.nextDouble();
                 System.out.print("Customs fee: ");
-                double customsFee = sc.nextDouble();
-                Product imp = new ImportedProduct(name, price, customsFee);
+                customsFee = sc.nextDouble();
+                ImportedProduct imp = new ImportedProduct(name, price, customsFee);
+                list.add(imp);
+            }else if(type.equals("u")){
+                System.out.println("Name: ");
+                sc.nextLine();
+                name = sc.nextLine();
+                System.out.print("Price: ");
+                price = sc.nextDouble();
+                System.out.println("Manufacture date (DD/MM/YYYY): ");
+                sc.nextLine();
+                date = sc.nextLine();
+                UsedProduct imp = new UsedProduct(name, price, date);
                 list.add(imp);
             }
         }
+        for(Product p : list){
+            System.out.println(p);
+        }
+        sc.close();
     }
 }

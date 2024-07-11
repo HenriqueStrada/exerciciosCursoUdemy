@@ -1,8 +1,7 @@
 package org.example.Heranca.ExercicioUm.Entidades;
 
 public class ImportedProduct extends Product {
-    private Double customsFee;
-
+    private final Double customsFee;
     public ImportedProduct(String name, Double price, Double customsFee){
         super(name, price);
         this.customsFee = customsFee;
@@ -10,15 +9,12 @@ public class ImportedProduct extends Product {
     public Double getCustomsFee() {
         return customsFee;
     }
-    public void setCustomsFee(Double customsFee) {
-        this.customsFee = customsFee;
-    }
 
-    public void setFinalPrice(){
-        finalPrice = customsFee + price;
+    public Double getFinalPrice() {
+        return this.getPrice() + customsFee;
     }
 
     public String toString(){
-        return getName() + " $ " + String.format("%.2f",setFinalPrice());
+        return getName() + " $ " + String.format("%.2f",getFinalPrice()) + " (Customs fee: $ " + String.format("%.2f",getCustomsFee()) + ")";
     }
 }

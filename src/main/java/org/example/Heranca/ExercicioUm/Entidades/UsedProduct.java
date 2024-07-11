@@ -4,8 +4,8 @@ public class UsedProduct extends Product{
 
     private String date;
 
-    public UsedProduct(String name, Double price, Double finalPrice, String date) {
-        super(name, price, finalPrice);
+    public UsedProduct(String name, Double price, String date) {
+        super(name, price);
         this.date = date;
     }
 
@@ -14,6 +14,10 @@ public class UsedProduct extends Product{
     }
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String toString(){
+        return  getName() + " (used) Price $ " + String.format("%.2f",getPrice()) + " (Manufacture date: " + getDate() + ")";
     }
 
 }
