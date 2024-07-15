@@ -16,8 +16,8 @@ public class _1065 {
         for (int i = 0; i < valores.length; i++) {
             if (valores[i] % 2 == 0) {
                 par++;
-                System.out.println(par + " valores pares");
             }
         }
+        System.out.println(par + " valores pares");
     }
 }
